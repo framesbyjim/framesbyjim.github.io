@@ -9,6 +9,117 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
+        /* ABOUT */
+
+#about{
+
+    background:#181818;
+
+    padding:120px 10%;
+
+    display:flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    gap:80px;
+
+    flex-wrap:wrap;
+
+}
+
+.about-image{
+
+    flex:1;
+
+    min-width:320px;
+
+    text-align:center;
+
+}
+
+.about-image img{
+
+    width:100%;
+
+    max-width:430px;
+
+    border-radius:18px;
+
+    object-fit:cover;
+
+    box-shadow:0 25px 60px rgba(0,0,0,.35);
+
+}
+
+.about-content{
+
+    flex:1;
+
+    min-width:320px;
+
+}
+
+.section-tag{
+
+    color:#c8a96a;
+
+    letter-spacing:4px;
+
+    font-size:.9rem;
+
+    margin-bottom:20px;
+
+}
+
+.about-content h2{
+
+    font-family:'Cormorant Garamond', serif;
+
+    font-size:3.5rem;
+
+    margin-bottom:25px;
+
+}
+
+.about-content p{
+
+    color:#bfbfbf;
+
+    line-height:1.9;
+
+    margin-bottom:25px;
+
+}
+
+.about-btn{
+
+    display:inline-block;
+
+    padding:16px 38px;
+
+    background:#c8a96a;
+
+    color:#111;
+
+    text-decoration:none;
+
+    border-radius:50px;
+
+    font-weight:600;
+
+    transition:.35s;
+
+}
+
+.about-btn:hover{
+
+    transform:translateY(-5px);
+
+    background:white;
+
+}
 *{
     margin:0;
     padding:0;
@@ -513,6 +624,39 @@ url("images/main header.jpg");
     </div>
 
 </div>
+
+</section>
+<section id="about">
+
+    <div class="about-image">
+
+        <img src="images/about.jpg" alt="Jim">
+
+    </div>
+
+    <div class="about-content">
+
+        <p class="section-tag">
+            ABOUT ME
+        </p>
+
+        <h2>The person behind the lens.</h2>
+
+        <p>
+            Hi, I'm <strong>Jim</strong>, a photographer based in the Philippines.
+            I enjoy capturing authentic moments—from portraits and landscapes
+            to everyday scenes that tell meaningful stories.
+        </p>
+
+        <p>
+            Every photo is more than just an image; it's a memory frozen in time.
+            My goal is to create photographs that people can look back on and
+            relive for years to come.
+        </p>
+
+        <a href="#contact" class="about-btn">Let's Work Together</a>
+
+    </div>
 
 </section>
 <footer>
