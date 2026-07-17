@@ -9,13 +9,14 @@
 
 <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700&family=Cormorant+Garamond:wght@400;500;600;700&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
-        .lightbox{
+        
+.lightbox{
 
     position:fixed;
 
     inset:0;
 
-    background:rgba(0,0,0,.95);
+    background:rgba(0,0,0,.97);
 
     display:flex;
 
@@ -27,13 +28,15 @@
 
     visibility:hidden;
 
-    transition:.4s;
+    transition:.35s ease;
 
     z-index:9999;
 
+    cursor:none;
+
 }
 
-.lightbox.active{
+.active{
 
     opacity:1;
 
@@ -41,7 +44,7 @@
 
 }
 
-.lightbox-img{
+-img{
 
     max-width:90%;
 
@@ -77,15 +80,19 @@
 
     position:absolute;
 
-    top:30px;
+    top:25px;
 
-    right:40px;
+    right:35px;
 
     font-size:45px;
 
     color:white;
 
     cursor:pointer;
+
+    opacity:0;
+
+    transition:.35s;
 
 }
 
@@ -98,15 +105,19 @@
 
     transform:translateY(-50%);
 
-    font-size:60px;
-
     color:white;
+
+    font-size:55px;
+
+    padding:25px;
 
     cursor:pointer;
 
-    user-select:none;
+    opacity:0;
 
-    padding:20px;
+    transition:.35s;
+
+    user-select:none;
 
 }
 
@@ -133,6 +144,14 @@
     font-family:Poppins;
 
     letter-spacing:2px;
+
+}
+.lightbox.show-ui .prev,
+.lightbox.show-ui .next,
+.lightbox.show-ui .close,
+.lightbox.show-ui .counter{
+
+    opacity:1;
 
 }
         footer{
@@ -975,6 +994,21 @@ const prevBtn=document.querySelector(".prev");
 const counter=document.querySelector(".counter");
 
 let current=0;
+let uiTimeout;
+        
+function showUI(){
+
+    lightbox.classList.add("show-ui");
+
+    clearTimeout(uiTimeout);
+
+    uiTimeout=setTimeout(()=>{
+
+        lightbox.classList.remove("show-ui");
+
+    },2000);
+
+}
 
 function showPhoto(index){
 
@@ -993,6 +1027,7 @@ photos.forEach((photo,index)=>{
         lightbox.classList.add("active");
 
         showPhoto(index);
+        showUI();
 
     });
 
@@ -1039,6 +1074,11 @@ lightbox.onclick=(e)=>{
         closeBtn.click();
 
     }
+lightbox.addEventListener("mousemove",()=>{
+
+    showUI();
+
+});
 
 }
 
