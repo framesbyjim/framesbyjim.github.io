@@ -1,5 +1,3 @@
-<script>
-
 const navbar = document.getElementById("navbar");
 
 window.addEventListener("scroll", () => {
@@ -16,7 +14,7 @@ window.addEventListener("scroll", () => {
 
 });
 
-</script>
+
     <div class="lightbox" id="lightbox">
 
     <span class="close">&times;</span>
@@ -30,7 +28,7 @@ window.addEventListener("scroll", () => {
     <div class="counter"></div>
 
 </div>
-    <script>
+    
 
 const photos=document.querySelectorAll(".gallery img");
 
@@ -135,4 +133,4 @@ lightbox.addEventListener("mousemove",()=>{
 
 }
 
-</script>
+
