@@ -1,1 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
 
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Visual Journal | Focus by Jim</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;700&family=Cormorant+Garamond:wght@400;600&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
+body{
+
+background:#0f0f0f;
+
+color:white;
+
+font-family:Poppins,sans-serif;
+
+}
+
+header{
+
+padding:90px 10% 50px;
+
+text-align:center;
+
+}
+
+header h1{
+
+font-family:Cinzel,serif;
+
+font-size:3rem;
+
+letter-spacing:5px;
+
+margin-bottom:20px;
+
+}
+
+header p{
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.8;
+
+color:#cfcfcf;
+
+font-family:"Cormorant Garamond",serif;
+
+font-size:1.2rem;
+
+}
+
+.back{
+
+position:fixed;
+
+top:30px;
+
+left:30px;
+
+text-decoration:none;
+
+color:white;
+
+border:1px solid #C8A96A;
+
+padding:12px 20px;
+
+border-radius:40px;
+
+transition:.3s;
+
+z-index:999;
+
+}
+
+.back:hover{
+
+background:#C8A96A;
+
+color:#111;
+
+}
+
+.gallery{
+
+column-count:4;
+
+column-gap:18px;
+
+padding:0 10% 100px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+margin-bottom:18px;
+
+border-radius:12px;
+
+cursor:pointer;
+
+transition:.35s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.02);
+
+}
+
+@media(max-width:1000px){
+
+.gallery{
+
+column-count:3;
+
+}
+
+}
+
+@media(max-width:700px){
+
+.gallery{
+
+column-count:2;
+
+padding:0 5% 80px;
+
+}
+
+}
+
+@media(max-width:500px){
+
+.gallery{
+
+column-count:1;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<a href="index.html" class="back">← Home</a>
+
+<header>
+
+<h1>Stories Through my Lens</h1>
+
+<p>
+
+Every photograph tells a story.
+
+This collection is a journey through moments,
+
+emotions, and places captured through my lens.
+
+</p>
+
+</header>
+
+<div class="gallery">
+
+<!-- Photos go here -->
+
+</div>
+
+</body>
+
+</html>
